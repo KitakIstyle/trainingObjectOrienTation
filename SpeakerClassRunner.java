@@ -1,7 +1,18 @@
 class Speaker {
+    private String word;
 
-    String word;
+    public void speakWord() {
+        System.out.println(word);
+    }
 
+    public String getWord() {
+        return word;
+    }
+
+    public void setWord(String setWord) {
+        setWord= "ByeBye";
+        word = setWord;
+    }
 }
 
 class SpeakerClassRunner {
@@ -10,11 +21,12 @@ class SpeakerClassRunner {
         Speaker refDayTime = new Speaker();
         Speaker refEvening = new Speaker();
 
-        refMorning.word = "Good morning";
-        refDayTime.word = "Hello";
-        refEvening.word = "Good Evening";
-
-        System.out.println(refMorning.word + "\n" + refDayTime.word + "\n" + refEvening.word);    
+        refMorning.setWord("Good morning");
+        refDayTime.setWord("Hello");
+        refEvening.setWord("Good Evening"); 
+        
+        refMorning.speakWord();
+        refDayTime.speakWord();
+        refEvening.speakWord();
     }
-
 }
